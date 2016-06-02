@@ -134,7 +134,7 @@ class License {
 	 * @return \DateTime
 	 */
 	public function get_date_expires() {
-		return $this->date_expires;
+		return apply_filters('license_wp_date_expires', $this->date_expires, $this->order_id, $this->product_id );
 	}
 
 	/**
